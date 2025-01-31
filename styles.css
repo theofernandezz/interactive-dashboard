@@ -1,0 +1,147 @@
+/* Global Styles */
+:root {
+    --bg-color: white;
+    --text-color: black;
+    --card-bg: #f9f9f9;
+    --header-bg: #007bff;
+    --btn-bg: #007bff;
+    --btn-color: white;
+    --table-header-bg: #007bff;
+    --table-header-color: white;
+    --table-row-bg: #f2f2f2;
+  }
+  
+  [data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: white;
+    --card-bg: #1e1e1e;
+    --header-bg: #0056b3;
+    --btn-bg: #0056b3;
+    --btn-color: white;
+    --table-header-bg: #0056b3;
+    --table-header-color: white;
+    --table-row-bg: #222;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--header-bg);
+    color: var(--btn-color);
+  }
+  
+  a h1 {
+    color: var(--btn-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  
+  /* Dark Mode Toggle Button */
+  #toggleButton {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--btn-color);
+    transition: color 0.3s;
+  }
+  
+  #toggleButton i {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  [data-theme="dark"] #toggleButton i {
+    transform: rotate(180deg);
+  }
+  
+  /* Main Content */
+  .main-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .main-container {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  #search-user h2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  #search {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+    background: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  /* Cards Section */
+  .cards {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .table-container {
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--text-color);
+  }
+  
+  th {
+    background: var(--table-header-bg);
+    color: var(--table-header-color);
+  }
+  
+  tbody tr:nth-child(even) {
+    background: var(--table-row-bg);
+  }
+  
+  /* Chart */
+  .chart-container {
+    width: 100%;
+    max-width: 500px;
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  

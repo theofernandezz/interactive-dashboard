@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Interactive Dashboard</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><h1>Interactive Dashboard</h1></a>
+      <button id="toggleButton"><i class="bx bxs-moon"></i></button>
+    </header>
+
+    <main class="main-content">
+      <div class="main-container">
+        <div id="search-user">
+          <h2>View your Stats</h2>
+          <input type="text" id="search" placeholder="Search by name..." />
+        </div>
+      </div>
+
+      <section class="cards">
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Sales</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody id="data-table"></tbody>
+          </table>
+        </div>
+
+        <div class="chart-container">
+          <canvas id="myChart"></canvas>
+      </section>
+    </main>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

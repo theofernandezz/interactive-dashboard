@@ -1,0 +1,14 @@
+{
+    "ventas": [
+        {"id": 1, "name": "Juan Perez", "sales": 1000, "date": "2021-01-01"},
+        {"id": 2, "name": "Maria Lopez", "sales": 1500, "date": "2021-01-02"},
+        {"id": 3, "name": "Carlos Sanchez", "sales": 2500, "date": "2021-01-03"},
+        {"id": 4, "name": "Ana Gomez", "sales": 3500, "date": "2021-01-04"},
+        {"id": 5, "name": "Luis Martinez", "sales": 4500, "date": "2021-01-05"},
+        {"id": 6, "name": "Sofia Rodriguez", "sales": 5500, "date": "2021-01-06"},
+        {"id": 7, "name": "Miguel Torres", "sales": 6500, "date": "2021-01-07"},
+        {"id": 8, "name": "Laura Fernandez", "sales": 7500, "date": "2021-01-08"},
+        {"id": 9, "name": "Jorge Ramirez", "sales": 8500, "date": "2021-01-09"},
+        {"id": 10, "name": "Elena Diaz", "sales": 9500, "date": "2021-01-10"}
+    ]
+}
