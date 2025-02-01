@@ -1,6 +1,7 @@
 export function initThemeToggle(buttonId) {
   const toggleButton = document.getElementById(buttonId);
-  if (!toggleButton) return; // Prevents errors if the button is missing
+  // Prevents errors if the button is missing
+  if (!toggleButton) return;
 
   const icon = toggleButton.querySelector("i");
   const currentTheme = localStorage.getItem("theme");

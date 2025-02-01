@@ -8,6 +8,10 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <title>Interactive Dashboard</title>
   </head>
   <body>
@@ -29,20 +33,19 @@
           <table>
             <thead>
               <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Sales</th>
-                <th>Date</th>
+                <th id="id">ID</th>
+                <th id="name">Name</th>
+                <th id="sales">Sales</th>
+                <th id="date">Date</th>
+                <th>Stats</th>
               </tr>
             </thead>
             <tbody id="data-table"></tbody>
           </table>
         </div>
-
-        <div class="chart-container">
-          <canvas id="myChart"></canvas>
       </section>
     </main>
-    <script type="module" src="main.js"></script>
+    <script type="module" src="main.mjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </body>
 </html>

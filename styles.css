@@ -1,147 +1,180 @@
-/* Global Styles */
+/* Styles & Color Variables */
 :root {
-    --bg-color: white;
-    --text-color: black;
-    --card-bg: #f9f9f9;
-    --header-bg: #007bff;
-    --btn-bg: #007bff;
-    --btn-color: white;
-    --table-header-bg: #007bff;
-    --table-header-color: white;
-    --table-row-bg: #f2f2f2;
-  }
-  
-  [data-theme="dark"] {
-    --bg-color: #121212;
-    --text-color: white;
-    --card-bg: #1e1e1e;
-    --header-bg: #0056b3;
-    --btn-bg: #0056b3;
-    --btn-color: white;
-    --table-header-bg: #0056b3;
-    --table-header-color: white;
-    --table-row-bg: #222;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    margin: 0;
-    padding: 0;
-    transition: background 0.3s, color 0.3s;
-  }
-  
-  /* Header */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: var(--header-bg);
-    color: var(--btn-color);
-  }
-  
-  a h1 {
-    color: var(--btn-color);
-    text-decoration: none;
-    font-size: 1.5rem;
-  }
-  
-  /* Dark Mode Toggle Button */
-  #toggleButton {
-    width: 40px;
-    height: 40px;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    font-size: 24px;
-    color: var(--btn-color);
-    transition: color 0.3s;
-  }
-  
-  #toggleButton i {
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  [data-theme="dark"] #toggleButton i {
-    transform: rotate(180deg);
-  }
-  
-  /* Main Content */
+  --bg-color: #f8f9fa;
+  --text-color: #333;
+  --card-bg: white;
+  --header-bg: linear-gradient(135deg, #6a11cb, #2575fc);
+  --btn-bg: #2575fc;
+  --btn-color: white;
+  --table-header-bg: #2575fc;
+  --table-header-color: white;
+  --table-row-bg: #f8f9fa;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --border-radius: 12px;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1e1e1e;
+  --text-color: #f8f9fa;
+  --card-bg: #2c2c2c;
+  --header-bg: linear-gradient(135deg, #121212, #1a1a1a);
+  --btn-bg: #6a11cb;
+  --table-header-bg: #6a11cb;
+  --table-row-bg: #333;
+}
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--header-bg);
+  color: var(--btn-color);
+  box-shadow: var(--shadow);
+}
+
+a {
+  color: var(--btn-color);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#toggleButton {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--btn-color);
+  transition: opacity 0.3s;
+}
+
+#toggleButton:hover {
+  opacity: 0.8;
+}
+
+/* Main Container */
+.main-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 800px;
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+#search-user h2 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+#search {
+  width: 97%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#search:focus {
+  border-color: var(--btn-bg);
+  box-shadow: 0 0 0 3px rgba(37, 117, 252, 0.2);
+  outline: none;
+}
+
+/* Table */
+.table-container {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: var(--table-header-bg);
+  color: var(--table-header-color);
+  font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+  background: var(--table-row-bg);
+}
+
+tbody tr:hover {
+  background-color: rgba(37, 117, 252, 0.1);
+  transition: background-color 0.3s;
+}
+
+/* Grafic */
+.chart-container {
+  width: 100%;
+  max-width: 800px;
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+/*"No data" Meseage*/
+#data-table:empty::before {
+  content: "No data found.";
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+
+
+/* Mobile Style */
+@media (max-width: 768px) {
   .main-content {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .main-container {
-    width: 100%;
-    max-width: 600px;
-    margin-bottom: 2rem;
-    background: var(--card-bg);
     padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-  
-  #search-user h2 {
-    margin-bottom: 0.5rem;
-  }
-  
-  #search {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid var(--text-color);
-    border-radius: 4px;
-    background: var(--bg-color);
-    color: var(--text-color);
-  }
-  
-  /* Cards Section */
-  .cards {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .table-container {
-    background: var(--card-bg);
+  header {
     padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-  
-  /* Table */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
   th, td {
     padding: 0.75rem;
-    text-align: left;
-    border-bottom: 1px solid var(--text-color);
   }
-  
-  th {
-    background: var(--table-header-bg);
-    color: var(--table-header-color);
-  }
-  
-  tbody tr:nth-child(even) {
-    background: var(--table-row-bg);
-  }
-  
-  /* Chart */
-  .chart-container {
-    width: 100%;
-    max-width: 500px;
-    background: var(--card-bg);
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
+}
